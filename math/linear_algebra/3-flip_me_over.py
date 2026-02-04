@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
-"""
-Module for transposing a 2D matrix
-"""
+'''
+    A function that returns the transpose of a 2D matrix, matrix:
+'''
+
 
 def matrix_transpose(matrix):
-    """
-    Returns the transpose of a 2D matrix
-    
-    Args:
-        matrix: 2D matrix to transpose
-        
-    Returns:
-        list: New transposed matrix
-    """
-    # Using list comprehension
-    return [[matrix[row][col] for row in range(len(matrix))] 
-            for col in range(len(matrix[0]))]
+    '''
+        This function def matrix_transpose(matrix):
+        returns the transpose of a 2D matrix, matrix:
+    '''
+    result = [
+        [matrix[j][i] for j in range(len(matrix))]
+        for i in range(len(matrix[0]))
+    ]
+    return result
