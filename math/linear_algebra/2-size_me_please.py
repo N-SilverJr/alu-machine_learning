@@ -3,7 +3,6 @@
 Module for calculating the shape of a matrix
 """
 
-
 def matrix_shape(matrix):
     """
     Calculates the shape of a matrix
@@ -18,8 +17,5 @@ def matrix_shape(matrix):
     current = matrix
     while isinstance(current, list):
         shape.append(len(current))
-        if current:
-            current = current[0]
-        else:
-            break
+        current = current[0] if current else None
     return shape
